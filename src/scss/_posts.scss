@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Baloo 2", cursive;
+  font-size: 1rem;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.box {
+  padding: 2em;
+  min-height: 974px;
+
+  &__item {
+    padding: 4px 0;
+    @include clearfix;
+    height: 80px;
+
+    &__category {
+      padding: 0.2em 0.4em;
+      background-color: rgba(27, 31, 35, 0.05);
+      border-radius: 3px;
+      font-size: 12px;
+      color: rgb(11, 90, 170);
+      float: left;
+      margin-left: 1em;
+    }
+
+    &__link {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #000;
+      font-size: 16px;
+      font-weight: 100;
+      float: left;
+      margin-top: 10px;
+
+      &:hover {
+        color: rgb(11, 90, 170);
+        text-decoration: none;
+      }
+    }
+  }
+
+  hr {
+    margin: 4px 0;
+    height: 3px;
+    border: 0;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0)
+    );
+  }
+}
+
+.navigation {
+  &__logo {
+    @include hide-text();
+    background-image: url(../components/ball.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+// stránkování u posts
+.pagination {
+  .page-item {
+    .page-link {
+      color: #000;
+      cursor: pointer;
+    }
+  }
+}
+
+
